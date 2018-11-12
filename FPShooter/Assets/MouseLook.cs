@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MouseLook : MonoBehaviour {
-
        public enum RotationAxes // Обозначаем структуру данных
        {
            MouseXAndY = 0, //Элементы структуры
@@ -12,7 +11,6 @@ public class MouseLook : MonoBehaviour {
        }
 
        public RotationAxes axes = RotationAxes.MouseXAndY; // Обозначаем переменную структуры (данная переменная будет отображаться в Inspector)
-
        public float sensitivityHor = 9.0f; // Переменная скорости по горизонтали
        public float sensitivityVert = 9.0f; // Переменная скорости по вертикали
 
@@ -35,6 +33,12 @@ public class MouseLook : MonoBehaviour {
                transform.localEulerAngles = new Vector3(_rotationX, rotationY, 0); // создаем новый трехмерный вектор (новую позицию взгляда нашего героя)
 
            } else { // если мы выберем MouseXAndY в инспекторе
+           
+               _rotationX -= Input.GetAxis("Mouse Y") * sensitivityVert; //первые две строки, то же самое, что и выше
+               _rotationX = Mathf.Clamp(_rotationX, minimumVert, maximumVert);
+               float delta = Input.GetAxis("Mouse X") * sensitivityHor; //теперь для совместного поворота нам нужно двигать взглядом не только в плоскости Y , но и X. Величина дельта добавляет значение перемещение в плоскости X.
+               float rotationY = transform.localEulerAngles.y + delta;// та же строка, что и выше, только прибавляется "+delta" - то есть помимо движения по вертикали мы можем и перемещаться по горизонтали на величину delta
+               transform.localEulerAngles = new Vector3(_rotationX,rotationY,0); // создаем новый трехмерный вектор (новую позицию взгляда нашего героя)
             //если вы прочитали до конца, то напишите мне в личку "I know MouseLook" , чтобы я понимал, что вы посмотрели данный код:)
         }
     }
