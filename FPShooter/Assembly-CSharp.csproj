@@ -61,10 +61,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\FPSInput.cs" />
-    <Compile Include="Assets\HelloWorld.cs" />
-    <Compile Include="Assets\MouseLook.cs" />
-    <Compile Include="Assets\Spin.cs" />
+    <Compile Include="Assets\Scripts\FPSInput.cs" />
+    <Compile Include="Assets\Scripts\HelloWorld.cs" />
+    <Compile Include="Assets\Scripts\MouseLook.cs" />
+    <Compile Include="Assets\Scripts\ReactiveTarget.cs" />
+    <Compile Include="Assets\Scripts\Shoot.cs" />
+    <Compile Include="Assets\Scripts\Spin.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/aleksej/Desktop/FPSShooter/FPShooter/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
