@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\ReactiveTarget.cs" />
     <Compile Include="Assets\Scripts\Shoot.cs" />
     <Compile Include="Assets\Scripts\Spin.cs" />
+    <Compile Include="Assets\Scripts\WanderingAI.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/aleksej/Desktop/FPSShooter/FPShooter/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
