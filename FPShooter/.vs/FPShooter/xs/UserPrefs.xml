@@ -1,6 +1,6 @@
 ﻿<Properties StartupConfiguration="{E2C11FA0-A1D4-0181-AF47-B9CF0069BCD4}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Shoot.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UIController.cs">
     <Files>
       <File FileName="Assets/Scripts/Shoot.cs" Line="21" Column="43" />
       <File FileName="Assets/Scripts/ReactiveTarget.cs" Line="18" Column="5" />
@@ -11,7 +11,8 @@
       <File FileName="Assets/Scripts/PlayerCharacter.cs" Line="13" Column="21" />
       <File FileName="Assets/Scripts/DeviceOperator.cs" Line="19" Column="10" />
       <File FileName="Assets/Scripts/DeviceTrigger.cs" Line="8" Column="1" />
-      <File FileName="Assets/Scripts/UIController.cs" Line="12" Column="3" />
+      <File FileName="Assets/Scripts/UIController.cs" Line="23" Column="1" />
+      <File FileName="Assets/SettingsPopup.cs" Line="11" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

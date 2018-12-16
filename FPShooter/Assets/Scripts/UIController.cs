@@ -7,10 +7,11 @@ public class UIController : MonoBehaviour {
 
     public Text scoreLabel;//объект сцены Reference Text, предназначенный для задания свойства Text
 
+    public SettingsPopup settingsPopup;
     // Use this for initialization
     void Start () {
-		
-	}
+        settingsPopup.Close();//Закрываем высплывающее окно в момент начала игры
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -19,7 +20,7 @@ public class UIController : MonoBehaviour {
 
     public void OnOpenSettings()
     {//метод, вызываемый кнопкой настроек
-        Debug.Log("open settings");
+        settingsPopup.Open();//Заменяем отладочный текст методом всплывающего окна
     }
 
     public void OnPointerDown() 
