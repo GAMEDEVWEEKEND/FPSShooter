@@ -15,12 +15,26 @@ public class SceneController : MonoBehaviour {
     void Start()
     {
         Vector3 startPos = originalCard.transform.position;//Положение первой карты, остальные от этой точки
-
-
-
-
-        int id = Random.Range(0, images.Length);
-        originalCard.SetCard(id, images[id]);//вызов открытого метода в MemoryCard
+        for (int i = 0; i < gridCols; i++)
+        {
+            for (int j = 0; j < gridRows; j++)
+            { // вложенные циклы, задающие как столбцы, так и строки
+                MemoryCard card; // Ссылка на контейнер для исходной карты или ее копий.
+                if (i == 0 && j == 0)
+                {
+                    card = originalCard;
+                }
+                else
+                {
+                    card = Instantiate(originalCard) as MemoryCard;
+                }
+                int id = Random.Range(0, images.Length);
+                card.SetCard(id, images[id]);//вызов открытого метода в MemoryCard
+                float posX = (offsetX * i) + startPos.x;
+                float posY = -(offsetY * j) + startPos.y;
+                card.transform.position = new Vector3(posX, posY, startPos.z);//в 2d смещаемся только по x  и y
+            }
+        }
     }
 
     // Update is called once per frame
