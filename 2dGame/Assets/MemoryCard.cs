@@ -19,7 +19,13 @@ public class MemoryCard : MonoBehaviour {
         if (cardBack.activeSelf)//запускаем код деактивации
         {
             cardBack.SetActive(false); //Делаем объект видимым/невидимым
+            controller.CardRevealed(this);// Уведомление контроллера при открытии этой карты
         }
+    }
+
+    public void Unreveal()
+    { //позволяет вернуть открытую карты на место
+        cardBack.SetActive(true);
     }
 
     public void SetCard(int id, Sprite image)//метод для передачи указанному объекту новых спрайтов
